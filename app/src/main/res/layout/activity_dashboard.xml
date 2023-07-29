@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue">
+
+    <ImageView
+        android:id="@+id/MedicalView"
+        android:layout_width="351dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/oval_edit_text"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/titleEmergency"
+        app:layout_constraintTop_toBottomOf="@+id/titleEmergency"
+        app:srcCompat="@drawable/ic_ambulance_logo" />
+
+    <ImageView
+        android:id="@+id/FireView"
+        android:layout_width="351dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/oval_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/PoliceView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/PoliceView"
+        app:layout_constraintTop_toBottomOf="@+id/PoliceView"
+        app:srcCompat="@drawable/ic_fire" />
+
+    <ImageView
+        android:id="@+id/PoliceView"
+        android:layout_width="351dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/oval_edit_text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/MedicalView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/MedicalView"
+        app:layout_constraintTop_toBottomOf="@+id/MedicalView"
+        app:srcCompat="@drawable/ic_police_logo" />
+
+    <TextView
+        android:id="@+id/titleEmergency"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:text="Click on the image you want to call"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headEmergency1" />
+
+    <TextView
+        android:id="@+id/headEmergency1"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Emergency Locator"
+        android:textAlignment="center"
+        android:textColor="@color/vibrantPink"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/HomeEmergency"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/oval_edit_text"
+        android:backgroundTint="@color/lightRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FireView"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/ic_home" />
+
+    <ImageView
+        android:id="@+id/AcctInfoEmergency"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="164dp"
+        android:background="@drawable/oval_edit_text"
+        android:backgroundTint="@color/lightRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FireView"
+        app:layout_constraintVertical_bias="0.017"
+        app:srcCompat="@drawable/ic_personpin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

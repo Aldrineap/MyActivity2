@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyProjectLocator</string>
+    <string name="emergency_locator">Emergency Locator</string>
+    <string name="Login">LOGIN</string>
+    <string name="email_address">Email</string>
+    <string name="facebook">Facebook</string>
+    <string name="don_t_have_an_account">\'t have an account?</string>
+    <string name="signup">SIGNUP</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="password_confirmed">Password Confirmed</string>
+    <string name="password_input">Password Input</string>
+    <string name="login">LOGIN</string>
+    <string name="signup2">SignUp</string>
+    <string name="Hospital_name">Name of Hospital</string>
+    <string name="Hospital_address">Address</string>
+    <string name="Hospital_LandPhone">LandPhone</string>
+    <string name="Hospital_MobilePhone">MobilePhone</string>
+    <string name="ic_image">Image\n</string>
+
+</resources>
