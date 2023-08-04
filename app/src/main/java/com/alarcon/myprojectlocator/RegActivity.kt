@@ -13,15 +13,24 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import com.alarcon.myprojectlocator.databinding.ActivityRegBinding
+import com.google.android.material.textfield.TextInputEditText
+import android.text.method.PasswordTransformationMethod
 
 class RegActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegBinding
+    private var isPasswordVisible = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.accountPasswordLayout.setEndIconOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            togglePasswordVisibilityRegActivity(isPasswordVisible)
+        }
 
         binding.button2.setOnClickListener {
             val fullName = binding.NameUser.text.toString()
@@ -49,6 +58,9 @@ class RegActivity : AppCompatActivity() {
 
                 setResult(Activity.RESULT_OK)
                 finish()
+
+                // Call the function to initialize password visibility
+                togglePasswordVisibilityRegActivity(isPasswordVisible)
 
             } else {
 
@@ -117,6 +129,24 @@ class RegActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
         }
     }
+
+    private fun togglePasswordVisibilityRegActivity(isVisible: Boolean) {
+        val passwordEditText = findViewById<TextInputEditText>(R.id.accountPassword)
+        val confirmPasswordEditText = findViewById<TextInputEditText>(R.id.accountPassword2)
+
+        if (isVisible) {
+            passwordEditText.transformationMethod = null
+            confirmPasswordEditText.transformationMethod = null
+        } else {
+            passwordEditText.transformationMethod = PasswordTransformationMethod()
+            confirmPasswordEditText.transformationMethod = PasswordTransformationMethod()
+        }
+
+        passwordEditText.setSelection(passwordEditText.text?.length ?: 0)
+        confirmPasswordEditText.setSelection(confirmPasswordEditText.text?.length ?: 0)
+    }
+
+
 
     companion object {
         private const val CHANNEL_ID = "registration_channel"
